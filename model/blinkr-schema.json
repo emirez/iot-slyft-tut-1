@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "blinkr",
+    "title": "Making a blinky API out of this",
+    "description": "Specify blink mode, duration etc. for an embedded device LED",
+    "type": "object",
+    "properties" : {
+    "on_d" : {
+          "type": "integer",
+          "description": "msec, how long to have LED turned on"
+        },
+    "off_d" : {
+          "type": "integer",
+          "description": "msec, how long to have LED turned off"
+        },
+    "t" : {
+          "type": "integer",
+          "description": "times of repetitions. Optional. If not given, run forever"
+    }
+    },
+    "additionalProperties": false,
+    "required": ["on_d", "off_d"],
+    "minProperties": 2
+}

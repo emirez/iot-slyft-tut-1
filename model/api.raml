@@ -1,0 +1,13 @@
+#%RAML 0.8
+title: coapled
+baseUri: coap://api.sylft.io/
+version: 0.1
+schemas:
+  - blinkr: blinkr-schema.json
+/led:
+  post:
+    description: |
+      Make LED blink with given frequency, returns status code.
+    body:
+      application/x-msgpack:
+        schema: blinkr
